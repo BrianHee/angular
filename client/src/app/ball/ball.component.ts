@@ -1,4 +1,6 @@
+import { EmailService } from './../email.service';
 import { Component, OnInit } from '@angular/core';
+import { BallService } from './ball.service';
 
 @Component({
   selector: 'app-ball',
@@ -12,14 +14,19 @@ import { Component, OnInit } from '@angular/core';
         {{ ball }}
       </li>
     </ul>
+    <h1>my email is: {{ email }}</h1>
   `,
   styleUrls: ['./ball.component.scss'],
 })
 export class BallComponent implements OnInit {
   value = 'Lol';
-  balls = ['green', 'red', 'yellow'];
+  balls: any;
+  email: string;
 
-  constructor() {}
+  constructor(service: BallService, email: EmailService) {
+    this.balls = service.getBalls();
+    this.email = email.getEmail();
+  }
 
   ngOnInit(): void {}
 }
