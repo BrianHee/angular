@@ -18,5 +18,9 @@ export class BallComponent implements OnInit {
     this.email = email.getEmail();
   }
 
+  activateBall() {
+    this.isActive = !this.isActive;
+  }
+
   ngOnInit(): void {}
 }

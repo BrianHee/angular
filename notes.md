@@ -8,3 +8,4 @@ Angular
 - attribute binding: attr.~  |  DOM vs HTML
 - class binding: [class.active]='isActive'
 - style binding: [style.backgroundColor] = "isActive ? 'blue' : 'white'"
+- event binding: event bubbling and $event.stopPropagation()
