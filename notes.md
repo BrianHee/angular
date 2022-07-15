@@ -1,7 +1,10 @@
 Angular
-- decorators
-- interpolation
-- dependency injection
+- decorators = @Component, @Injectable
+- interpolation = {{ }}  VS  property binding
+- dependency injection = declare dependencies of classes without taking care of their instantiation
 - services
-- directives
+- directives = *ngIf *ngFor
 - singleton
+- attribute binding: attr.~  |  DOM vs HTML
+- class binding: [class.active]='isActive'
+- style binding: [style.backgroundColor] = "isActive ? 'blue' : 'white'"
